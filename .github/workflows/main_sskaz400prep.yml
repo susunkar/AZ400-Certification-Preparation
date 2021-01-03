@@ -23,8 +23,7 @@ jobs:
     - name: Install Python dependencies
       run: |
         pip install -r ./AzureCert-flash-cards/requirements.txt
-        export FLASK_APP=flash_cards.py
-        flask run -h 0.0.0.0
+        
 
     - name: Zip the application files
       run: Compress-Archive .\* app.zip
