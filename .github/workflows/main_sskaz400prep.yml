@@ -33,4 +33,4 @@ jobs:
         app-name: 'sskaz400prep'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_221da370372049bbb48fa79fa95c91c1 }}
-        package: '.\myapp.zip'
+        package: '.\app.zip'
