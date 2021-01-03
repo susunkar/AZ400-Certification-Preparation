@@ -22,7 +22,6 @@ jobs:
 
     - name: Install Python dependencies
       run: |
-        python3 -m venv env
         pip install -r requirements.txt
 
     - name: Zip the application files
