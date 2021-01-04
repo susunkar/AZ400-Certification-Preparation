@@ -26,7 +26,7 @@ jobs:
         pip install -r ./AzureCert-flash-cards/requirements.txt
         pip install flask
         $env:FLASK_APP="./AzureCert-flash-cards/flash_cards.py"
-        python -m flask run
+        
 
     - name: Zip the application files
       run: Compress-Archive .\* app.zip
