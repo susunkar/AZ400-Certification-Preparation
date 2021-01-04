@@ -35,4 +35,4 @@ jobs:
         app-name: 'az400prep'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_e9e1e6e3fc954931ad72ad3a18e40cef }}
-        package: '.\myapp.zip'
+        package: '.\app.zip'
