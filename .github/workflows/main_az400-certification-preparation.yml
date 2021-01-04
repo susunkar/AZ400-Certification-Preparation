@@ -24,8 +24,8 @@ jobs:
       run: |
         python2.7 -m venv env
         pip install -r requirements.txt
-        export FLASK_APP=flash_cards.py
-        flask run
+        $env:FLASK_APP="flash_cards.py"
+        python2.7 -m flask run
 
     - name: Zip the application files
       run: Compress-Archive .\* app.zip
