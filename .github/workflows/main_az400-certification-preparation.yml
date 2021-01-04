@@ -23,7 +23,8 @@ jobs:
     - name: Install Python dependencies
       run: |
         python2.7 -m venv env
-        pip install -r requirements.txt
+        pip install -r ./AzureCert-flash-cards/requirements.txt
+        pip install flask
         $env:FLASK_APP="flash_cards.py"
         python2.7 -m flask run
 
