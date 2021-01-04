@@ -22,7 +22,7 @@ jobs:
 
     - name: Install Python dependencies
       run: |
-        python2 -m venv env
+        python2.7 -m venv env
         .\env\Scripts\activate
         pip install -r ./AzureCert-flash-cards/requirements.txt
 
