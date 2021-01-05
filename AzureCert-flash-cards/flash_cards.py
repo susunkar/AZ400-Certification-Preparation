@@ -216,12 +216,12 @@ def memorize(card_type, card_id):
         flash("You've learned all the " + card_type + " cards.")
         return redirect(url_for('cards'))
     short_answer = (len(card['back']) < 9999)
-    image = b64encode(card['back']).decode("utf-8")
+    #image = b64encode(card['back']).decode("utf-8")
     textCardBack = ""
     if short_answer == True:
         textCardBack = card['back']
     else:
-        textCardBack = image
+        textCardBack = card['back']
     return render_template('memorize.html',
                            card=card,
                            card_type=card_type,
