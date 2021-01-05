@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Python app to Azure Web App - az400-certification-preparation
+name: Build and deploy Python app to Azure Web App - AZ400-Certification-Preparation
 
 on:
   push:
@@ -18,15 +18,15 @@ jobs:
     - name: Set up Python version
       uses: actions/setup-python@v1
       with:
-        python-version: '3'
+        python-version: '3.6'
 
     - name: Install Python dependencies
       run: |
         python -m venv env
         pip install -r ./AzureCert-flash-cards/requirements.txt
         pip install flask
+        pip install waitress
         $env:FLASK_APP="./AzureCert-flash-cards/flash_cards.py"
-        
 
     - name: Zip the application files
       run: Compress-Archive .\* app.zip
@@ -34,7 +34,7 @@ jobs:
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'az400-certification-preparation'
+        app-name: 'AZ400-Certification-Preparation'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_f86e9eaad72f46ff87ac100cf236cafb }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_c1664088f81948a0bb26d4b51c7f7487 }}
         package: '.\app.zip'
