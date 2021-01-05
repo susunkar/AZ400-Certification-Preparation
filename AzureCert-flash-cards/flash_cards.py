@@ -4,9 +4,14 @@ import sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort, \
     render_template, flash
 
-import sys
-reload(sys)
-sys.setdefaultencoding("utf-8")
+#Py2 code
+# import sys
+# reload(sys)
+# sys.setdefaultencoding("utf-8")
+
+#Py3 Code
+from importlib import reload
+
 
 app = Flask(__name__)
 app.config.from_object(__name__)
