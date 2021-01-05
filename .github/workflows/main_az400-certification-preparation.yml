@@ -37,4 +37,4 @@ jobs:
         app-name: 'az400-certification-preparation'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_f86e9eaad72f46ff87ac100cf236cafb }}
-        package: '.\app.zip'
+        package: '.\myapp.zip'
