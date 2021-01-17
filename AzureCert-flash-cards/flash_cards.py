@@ -155,17 +155,11 @@ def edit_card():
     command = '''
         UPDATE cards
         SET
-          type = ?,
-          front = ?,
-          back = ?,
           known = ?
         WHERE id = ?
     '''
     db.execute(command,
-               [request.form['type'],
-                request.form['front'],
-                request.form['back'],
-                known,
+               [known,
                 request.form['card_id']
                 ])
     db.commit()
